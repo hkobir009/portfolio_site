@@ -13,6 +13,7 @@ use App\Http\Controllers\choosecontroller;
 use App\Http\Controllers\countController;
 use App\Http\Controllers\testimonialcontroller;
 use App\Http\Controllers\footercontroller;
+use App\Http\Controllers\loginController;
 use App\Http\Controllers\parsonalcontroller;
 use App\Http\Controllers\socialController;
 
@@ -28,7 +29,7 @@ Route::get('/Contact',[contactController::class,'contactIndex'])->name('Contact'
 
 //                             ADMIN ROUTE
 
-
+Route::get('/login',[loginController::class,'login']);
 
 Route::get('/deshboard',[deshboardcontroller::class,'deshboardIndex']);
 
