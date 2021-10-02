@@ -16,14 +16,13 @@
                     </tr>
                 </thead>
                 <tbody id="choose_table">
-  
+
                 </tbody>
             </table>
-  
         </div>
     </div>
   </div>
-  
+
   <!-- Loding animation  -->
   <div id="chooseloderDiv" class="container">
     <div class="row">
@@ -32,8 +31,8 @@
         </div>
     </div>
   </div>
-  
-  
+
+
   <!-- Something went wrong  -->
   <div id="chooseWrongDiv" class="container d-none">
     <div class="row">
@@ -42,7 +41,7 @@
         </div>
     </div>
   </div>
-  
+
 
                                        <!-- Delete Modal -->
 
@@ -58,8 +57,8 @@
         </div>
     </div>
   </div>
-  
-  
+
+
 
                                     <!-- Update Modal -->
 
@@ -101,7 +100,7 @@
     <div class="modal-content">
       <div class="modal-body p-5 text-center">
           <div id="chooseAddForm" class=" w-100">
-          <h6 class="mb-4">Add New Services</h6>  
+          <h6 class="mb-4">Add New Services</h6>
           <input id="chooseIconAddID" type="text" class="form-control mb-4" placeholder="Services Icon">
           <input id="chooseDesAddID" type="text" class="form-control mb-4" placeholder="Services Description">
           </div>
@@ -121,7 +120,7 @@
 <script type="text/javascript">
 getChooseData();
 
-//                           Choose load data 
+//                           Choose load data
 function getChooseData() {
     axios.get('/getChooseData')
         .then(function(response) {
@@ -155,7 +154,7 @@ function getChooseData() {
                     detailsChooseData(id);
                     $('#chooseUpdateModal').modal('show');
                 })
-            
+
             } else {
                 $('#chooseloderDiv').addClass('d-none');
                 $('#chooseWrongDiv').removeClass('d-none');
@@ -168,7 +167,7 @@ function getChooseData() {
 }
 
 
-//                       Services Modal Delete Confrom btn  
+//                       Services Modal Delete Confrom btn
 
 $('#chooseDeleteConfromBtn').click(function() {
     let id = $('#chooseDeleteId').html();
@@ -176,7 +175,7 @@ $('#chooseDeleteConfromBtn').click(function() {
 
 })
 
-//                           Choose  Delete  data 
+//                           Choose  Delete  data
 
 function deleteChooseData(deleteID) {
     $('#chooseDeleteConfromBtn').html("<div class='spinner-border spinner-border-sm' role='status'></div>") // Animation ......
@@ -231,7 +230,7 @@ function detailsChooseData(detailsID) {
 
 
 
-//                       Choose Modal Update Confrom btn  
+//                       Choose Modal Update Confrom btn
 
 $('#chooseUpdateConfirmBtn').click(function() {
     var id = $('#chooseUpdateId').html();
@@ -291,7 +290,7 @@ $('#chooseAddConfirmBtn').click(function() {
 
 })
 
-//                          Add  Choose  data 
+//                          Add  Choose  data
 
 function addChooseData(addicon, adddes) {
     if (addicon.length == 0) {
