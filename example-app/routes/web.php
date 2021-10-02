@@ -30,6 +30,7 @@ Route::get('/Contact',[contactController::class,'contactIndex'])->name('Contact'
 //                             ADMIN ROUTE
 
 Route::get('/login',[loginController::class,'login']);
+Route::get('/registration',[loginController::class,'registration']);
 
 Route::get('/deshboard',[deshboardcontroller::class,'deshboardIndex']);
 
