@@ -13,8 +13,8 @@
             <button type="button" id="PORTFOLIO" class="btn btn-primary btn-rounded">PORTFOLIO</button>
         </div>
         <div id="p_table" class="row portfolio-filter" data-aos="fade-left">
-            
-            <div class="p-all p-ecom d-none col-lg-4 col-md-6 col-sm-12 mix app">
+
+            <div class="p-all p-ecom col-lg-4 col-md-6 col-sm-12 mix app">
                 <div class="portfolio_item">
                     <img src="img/portfolio/image_5.jpg" alt="">
                     <div class="portfolio_info_overlay">
@@ -24,7 +24,8 @@
                     </div>
                 </div>
             </div>
-            <div class="p-all p-portal d-none col-lg-4 col-md-6 col-sm-12 mix app">
+
+            <div class="p-all p-portal col-lg-4 col-md-6 col-sm-12 mix app">
                 <div class="portfolio_item">
                     <img src="img/portfolio/image_5.jpg" alt="">
                     <div class="portfolio_info_overlay">
@@ -34,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <div class="p-all p-business d-none col-lg-4 col-md-6 col-sm-12 mix app">
+            <div class="p-all p-business col-lg-4 col-md-6 col-sm-12 mix app">
                 <div class="portfolio_item">
                     <img src="img/portfolio/image_5.jpg" alt="">
                     <div class="portfolio_info_overlay">
@@ -44,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="p-all p-portfolio d-none col-lg-4 col-md-6 col-sm-12 mix app">
+            <div class="p-all p-portfolio col-lg-4 col-md-6 col-sm-12 mix app">
                 <div class="portfolio_item">
                     <img src="img/portfolio/image_5.jpg" alt="">
                     <div class="portfolio_info_overlay">
@@ -57,7 +58,7 @@
 
         </div>
 <!-- ---Pagination----->
-       
+
         <nav>
             <ul class="pagination">
                 <li class="page-item disabled">

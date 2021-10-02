@@ -4,16 +4,20 @@
 $('#All').click(function() {
     $('.p-all').removeClass('d-none');
 })
-$('#E-COMMERCE').click(function() { 
+$('#E-COMMERCE').click(function() {
+    $('.p-all').addClass('d-none');
     $('.p-ecom').removeClass('d-none');
 })
-$('#BUSINESS').click(function() { 
+$('#BUSINESS').click(function() {
+    $('.p-all').addClass('d-none');
     $('.p-business').removeClass('d-none');
 })
 $('#PORTAL').click(function() {
+    $('.p-all').addClass('d-none');
     $('.p-portal').removeClass('d-none');
 })
 $('#PORTFOLIO').click(function() {
+    $('.p-all').addClass('d-none');
     $('.p-portfolio').removeClass('d-none');
 })
 
@@ -31,9 +35,9 @@ $('#contactAddConfirmBtn').click(function() {
 
 })
 
-//                        Contact Insert data 
+//                        Contact Insert data
 
-function insertContactData(name,email,phone,Website,massege,currentdate){   
+function insertContactData(name,email,phone,Website,massege,currentdate){
         if (name.length==0) {
             $('#contactAddConfirmBtn').html('Enter Your Name')
             setTimeout(function(){
@@ -95,8 +99,8 @@ function insertContactData(name,email,phone,Website,massege,currentdate){
                      $('#contactAddConfirmBtn').html('SEND MASSEGE');
                      },2000)
                  });
-                 
+
         }
-        
+
 }
 
