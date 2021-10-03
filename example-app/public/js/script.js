@@ -104,3 +104,24 @@ function insertContactData(name,email,phone,Website,massege,currentdate){
 
 }
 
+ $('.loginForm').on('submit',function(event){
+       event.preventDefault();
+       let formData= $(this).serializeArray();
+       let user_email = formData[0]['value'];
+       let user_password = formData[1]['value'];
+       let url='/onlogin'
+
+       axios.post(url,{
+        email:user_email,
+        pass:user_password
+       }).then(function(responce){
+            if(responce.status==200 && responce.data==1){
+                window.location.replace('/deshboard');
+            }else{
+                alert('login failed');
+            }
+       }).catch(function(error){
+        alert('catch failed');
+       });
+ })
+

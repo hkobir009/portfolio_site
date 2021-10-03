@@ -30,84 +30,85 @@ Route::get('/Contact',[contactController::class,'contactIndex'])->name('Contact'
 //                             ADMIN ROUTE
 
 Route::get('/login',[loginController::class,'login'])->name('login');
+Route::post('/onlogin',[loginController::class,'onlogin']);
+Route::get('/logout',[loginController::class,'onlogout']);
 Route::get('/registration',[loginController::class,'registration'])->name('registration');
 
-Route::get('/deshboard',[deshboardcontroller::class,'deshboardIndex']);
-
-Route::get('/visitor',[visitorcontroller::class,'visitorIndex']);
+Route::get('/deshboard',[deshboardcontroller::class,'deshboardIndex'])->middleware('loginCheck');
+Route::get('/visitor',[visitorcontroller::class,'visitorIndex'])->middleware('loginCheck');
 
 //                              Skill section
 
-Route::get('/Skills',[homecontroller::class,'skillIndex']);
-Route::get('/getSkillData',[skillcontroller::class,'getSkillData']);
-Route::post('/deleteSkillData',[skillcontroller::class,'deleteSkillData']);
-Route::post('/detailsSkillData',[skillcontroller::class,'detailsSkillData']);
-Route::post('/updateSkillData',[skillcontroller::class,'updateSkillData']);
-Route::post('/addSkillData',[skillcontroller::class,'addSkillData']);
+Route::get('/Skills',[homecontroller::class,'skillIndex'])->middleware('loginCheck');
+Route::get('/getSkillData',[skillcontroller::class,'getSkillData'])->middleware('loginCheck');
+Route::post('/deleteSkillData',[skillcontroller::class,'deleteSkillData'])->middleware('loginCheck');
+Route::post('/detailsSkillData',[skillcontroller::class,'detailsSkillData'])->middleware('loginCheck');
+Route::post('/updateSkillData',[skillcontroller::class,'updateSkillData'])->middleware('loginCheck');
+Route::post('/addSkillData',[skillcontroller::class,'addSkillData'])->middleware('loginCheck');
 
 //                              Service section
 
-Route::get('/services',[homecontroller::class,'servicesIndex']);
-Route::get('/getservicesData',[servicescontroller::class,'getservicesData']);
-Route::post('/deleteServicesData',[servicescontroller::class,'deleteServicesData']);
-Route::post('/detailsServicesData',[servicescontroller::class,'detailsServicesData']);
-Route::post('/updateServicesData',[servicescontroller::class,'updateServicesData']);
-Route::post('/addServicesData',[servicescontroller::class,'addServicesData']);
+Route::get('/services',[homecontroller::class,'servicesIndex'])->middleware('loginCheck');
+Route::get('/getservicesData',[servicescontroller::class,'getservicesData'])->middleware('loginCheck');
+Route::post('/deleteServicesData',[servicescontroller::class,'deleteServicesData'])->middleware('loginCheck');
+Route::post('/detailsServicesData',[servicescontroller::class,'detailsServicesData'])->middleware('loginCheck');
+Route::post('/updateServicesData',[servicescontroller::class,'updateServicesData'])->middleware('loginCheck');
+Route::post('/addServicesData',[servicescontroller::class,'addServicesData'])->middleware('loginCheck');
 
 
 //                              Choose section
 
-Route::get('/choose',[homecontroller::class,'chooseIndex']);
-Route::get('/getChooseData',[choosecontroller::class,'getChooseData']);
-Route::post('/deleteChooseData',[choosecontroller::class,'deleteChooseData']);
-Route::post('/detailsChooseData',[choosecontroller::class,'detailsChooseData']);
-Route::post('/updateChooseData',[choosecontroller::class,'updateChooseData']);
-Route::post('/addChooseData',[choosecontroller::class,'addChooseData']);
+Route::get('/choose',[homecontroller::class,'chooseIndex'])->middleware('loginCheck');
+Route::get('/getChooseData',[choosecontroller::class,'getChooseData'])->middleware('loginCheck');
+Route::post('/deleteChooseData',[choosecontroller::class,'deleteChooseData'])->middleware('loginCheck');
+Route::post('/detailsChooseData',[choosecontroller::class,'detailsChooseData'])->middleware('loginCheck');
+Route::post('/updateChooseData',[choosecontroller::class,'updateChooseData'])->middleware('loginCheck');
+Route::post('/addChooseData',[choosecontroller::class,'addChooseData'])->middleware('loginCheck');
 
 
 //                              Testimonial section
 
-Route::get('/testimonial',[homecontroller::class,'testimonialIndex']);
-Route::get('/getTestimonialData',[testimonialcontroller::class,'getTestimonialData']);
-Route::post('/deleteTestimonialData',[testimonialcontroller::class,'deleteTestimonialData']);
-Route::post('/detailsTestimonialData',[testimonialcontroller::class,'detailsTestimonialData']);
-Route::post('/updateTestimonialData',[testimonialcontroller::class,'updateTestimonialData']);
-Route::post('/addTestimonialData',[testimonialcontroller::class,'addTestimonialData']);
+Route::get('/testimonial',[homecontroller::class,'testimonialIndex'])->middleware('loginCheck');
+Route::get('/getTestimonialData',[testimonialcontroller::class,'getTestimonialData'])->middleware('loginCheck');
+Route::post('/deleteTestimonialData',[testimonialcontroller::class,'deleteTestimonialData'])->middleware('loginCheck');
+Route::post('/detailsTestimonialData',[testimonialcontroller::class,'detailsTestimonialData'])->middleware('loginCheck');
+Route::post('/updateTestimonialData',[testimonialcontroller::class,'updateTestimonialData'])->middleware('loginCheck');
+Route::post('/addTestimonialData',[testimonialcontroller::class,'addTestimonialData'])->middleware('loginCheck');
 
 
 //                              Count section
 
-Route::get('/count',[homecontroller::class,'countIndex']);
-Route::get('/getCountData',[countController::class,'getCountData']);
-Route::post('/deleteCountData',[countController::class,'deleteCountData']);
-Route::post('/detailsCountData',[countController::class,'detailsCountData']);
-Route::post('/updateCountData',[countController::class,'updateCountData']);
-Route::post('/addCountData',[countController::class,'addCountData']);
+Route::get('/count',[homecontroller::class,'countIndex'])->middleware('loginCheck');
+Route::get('/getCountData',[countController::class,'getCountData'])->middleware('loginCheck');
+Route::post('/deleteCountData',[countController::class,'deleteCountData'])->middleware('loginCheck');
+Route::post('/detailsCountData',[countController::class,'detailsCountData'])->middleware('loginCheck');
+Route::post('/updateCountData',[countController::class,'updateCountData'])->middleware('loginCheck');
+Route::post('/addCountData',[countController::class,'addCountData'])->middleware('loginCheck');
 
 //                              Parsonal Info section
 
-Route::get('/parsonal',[aboutController::class,'parsonalIndex']);
-Route::get('/getParsonalData',[parsonalcontroller::class,'getParsonalData']);
-Route::post('/deleteParsonalData',[parsonalcontroller::class,'deleteParsonalData']);
-Route::post('/detailsParsonalData',[parsonalcontroller::class,'detailsParsonalData']);
-Route::post('/updateParsonalData',[parsonalcontroller::class,'updateParsonalData']);
-Route::post('/addParsonalData',[parsonalcontroller::class,'addParsonalData']);
+Route::get('/parsonal',[aboutController::class,'parsonalIndex'])->middleware('loginCheck');
+Route::get('/getParsonalData',[parsonalcontroller::class,'getParsonalData'])->middleware('loginCheck');
+Route::post('/deleteParsonalData',[parsonalcontroller::class,'deleteParsonalData'])->middleware('loginCheck');
+Route::post('/detailsParsonalData',[parsonalcontroller::class,'detailsParsonalData'])->middleware('loginCheck');
+Route::post('/updateParsonalData',[parsonalcontroller::class,'updateParsonalData'])->middleware('loginCheck');
+Route::post('/addParsonalData',[parsonalcontroller::class,'addParsonalData'])->middleware('loginCheck');
 
 //                              Social Info section
 
-Route::get('/social',[contactController::class,'socialIndex']);
-Route::get('/getSocialData',[socialController::class,'getSocialData']);
-Route::post('/deleteSocialData',[socialController::class,'deleteSocialData']);
-Route::post('/detailsSocialData',[socialController::class,'detailsSocialData']);
-Route::post('/updateSocialData',[socialController::class,'updateSocialData']);
-Route::post('/addSocialData',[socialController::class,'addSocialData']);
+Route::get('/social',[contactController::class,'socialIndex'])->middleware('loginCheck');
+Route::get('/getSocialData',[socialController::class,'getSocialData'])->middleware('loginCheck');
+Route::post('/deleteSocialData',[socialController::class,'deleteSocialData'])->middleware('loginCheck');
+Route::post('/detailsSocialData',[socialController::class,'detailsSocialData'])->middleware('loginCheck');
+Route::post('/updateSocialData',[socialController::class,'updateSocialData'])->middleware('loginCheck');
+Route::post('/addSocialData',[socialController::class,'addSocialData'])->middleware('loginCheck');
 
 //                              Contact Send
 
-Route::get('/contact',[contactController::class,'contactData']);
-Route::get('/getContactData',[contactController::class,'getContactData']);
-Route::post('/insertContactData',[contactController::class,'insertContactData']);
-Route::post('/deleteContactData',[contactController::class,'deleteContactData']);
+Route::get('/contact',[contactController::class,'contactData'])->middleware('loginCheck');
+Route::get('/getContactData',[contactController::class,'getContactData'])->middleware('loginCheck');
+Route::post('/insertContactData',[contactController::class,'insertContactData'])->middleware('loginCheck');
+Route::post('/deleteContactData',[contactController::class,'deleteContactData'])->middleware('loginCheck');
 
 
 //Route::get('/test',[contactController::class,'Datetime']);

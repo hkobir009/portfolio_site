@@ -12,23 +12,23 @@
                 <form>
 
                   <div class="form-outline mb-4">
-                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example1cg">Your Name</label>
+                        <input type="text" name="userNmame" value="" id="form3Example1cg" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example1cg">Your User Name</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                    <input type="text" name="name" value="" id="form3Example1cg" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example1cg">Your Full Name</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="email" name="email" value="" id="form3Example3cg" class="form-control form-control-lg" />
                     <label class="form-label" for="form3Example3cg">Your Email</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
+                    <input type="password" name="userPassword" value="" id="form3Example4cg" class="form-control form-control-lg" />
                     <label class="form-label" for="form3Example4cg">Password</label>
-                  </div>
-
-                  <div class="form-outline mb-4">
-                    <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-                    <label class="form-label" for="form3Example4cdg">Repeat your password</label>
                   </div>
 
                   <div class="d-flex justify-content-center">
