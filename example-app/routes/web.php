@@ -34,7 +34,7 @@ Route::post('/onlogin',[loginController::class,'onlogin']);
 Route::get('/logout',[loginController::class,'onlogout']);
 Route::get('/registration',[loginController::class,'registration'])->name('registration');
 
-Route::get('/deshboard',[deshboardcontroller::class,'deshboardIndex'])->middleware('loginCheck');
+Route::get('/deshboard',[deshboardcontroller::class,'deshboardIndex']);
 Route::get('/visitor',[visitorcontroller::class,'visitorIndex'])->middleware('loginCheck');
 
 //                              Skill section

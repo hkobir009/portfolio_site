@@ -16,7 +16,7 @@ class loginMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->session()->has('$user')){
+        if($request->session()->has('user')){
             return $next($request);
         }else{
             return redirect('/login');
