@@ -9,30 +9,33 @@
               <div class="card-body p-5">
                 <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-                <form>
+                <div id="success_msg" class=" d-none alert alert-primary" role="alert">
+                    Your account Registration successfully
+                </div>
+                <div id="wrong_msg" class=" d-none alert alert-danger" role="alert">
+                    Registration unccessfully Please try again
+                </div>
+
+                <form action="" class="regFrom">
 
                   <div class="form-outline mb-4">
-                        <input type="text" name="userNmame" value="" id="form3Example1cg" class="form-control form-control-lg" />
+                        <input type="text" name="userNmame" value="" class="form-control form-control-lg" />
                         <label class="form-label" for="form3Example1cg">Your User Name</label>
                   </div>
-
                   <div class="form-outline mb-4">
-                    <input type="text" name="name" value="" id="form3Example1cg" class="form-control form-control-lg" />
+                    <input type="text" name="name" value="" class="form-control form-control-lg" />
                     <label class="form-label" for="form3Example1cg">Your Full Name</label>
                   </div>
-
                   <div class="form-outline mb-4">
-                    <input type="email" name="email" value="" id="form3Example3cg" class="form-control form-control-lg" />
+                    <input type="email" name="email" value="" class="form-control form-control-lg" />
                     <label class="form-label" for="form3Example3cg">Your Email</label>
                   </div>
-
                   <div class="form-outline mb-4">
-                    <input type="password" name="userPassword" value="" id="form3Example4cg" class="form-control form-control-lg" />
+                    <input type="password" name="userPassword" value="" class="form-control form-control-lg" />
                     <label class="form-label" for="form3Example4cg">Password</label>
                   </div>
-
                   <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                    <button name="submit" type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                   </div>
 
                   <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="{{route('login')}}" class="fw-bold text-body"><u>Login here</u></a></p>

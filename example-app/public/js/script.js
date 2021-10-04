@@ -118,10 +118,36 @@ function insertContactData(name,email,phone,Website,massege,currentdate){
             if(responce.status==200 && responce.data==1){
                 window.location.replace('/deshboard');
             }else{
-                alert('login failed');
+                $('#log_wrong_msg').removeClass('d-none');
             }
        }).catch(function(error){
-        alert('catch failed');
+        $('#log_wrong_msg').removeClass('d-none');
        });
  })
+
+ $('.regFrom').on('submit',function(event){
+    event.preventDefault();
+    let formData= $(this).serializeArray();
+    let userName = formData[0]['value'];
+    let fullName = formData[1]['value'];
+    let userEmail = formData[2]['value'];
+    let userPass = formData[3]['value'];
+    let url='/onregistration'
+
+    axios.post(url,{
+        user_name:userName,
+        name:fullName,
+        email:userEmail,
+        password:userPass
+    }).then(function(responce){
+         if(responce.status==200 && responce.data==1){
+             $('#success_msg').removeClass('d-none');
+         }else{
+            $('#wrong_msg').removeClass('d-none');
+         }
+    }).catch(function(error){
+        $('#wrong_msg').removeClass('d-none');
+    });
+})
+
 

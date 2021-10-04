@@ -36,4 +36,19 @@ class loginController extends Controller
         return redirect('/login');
     }
 
+    public function onregistration(Request $request){
+
+        $user_info = new adminModel;
+        $user_info->user_name = $request->input('user_name');
+        $user_info->name = $request->input('name');
+        $user_info->email = $request->input('email');
+        $user_info->password = $request->input('password');
+        $result = $user_info->save();
+        if($result==true){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
 }

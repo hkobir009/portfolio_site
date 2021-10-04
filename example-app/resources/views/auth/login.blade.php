@@ -13,6 +13,10 @@
                       <h2 class="text-white fw-bold text-uppercase">Login</h2>
                       <p class="text-white-50 mb-5">Please enter your Email and password!</p>
 
+                      <div id="log_wrong_msg" class=" d-none alert alert-danger" role="alert">
+                        Registration unccessfully Please try again
+                    </div>
+
                       <div class="form-outline form-white mb-4">
                           <input required="" type="email" name="email" value="" class="form-control form-control-lg" />
                           <label class="form-label" for="typeEmailX">Email</label>
@@ -22,11 +26,7 @@
                             <input required="" type="password" name="password" value="" class="form-control form-control-lg" />
                             <label class="form-label" for="typePasswordX">Password</label>
                         </div>
-
-                        <p class="small pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
-
                         <button class="btn btn-outline-light btn-lg px-5" name="submit" type="submit">Login</button>
-
                     </form>
                     </div>
 
